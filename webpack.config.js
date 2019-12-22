@@ -30,12 +30,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader',  'sass-loader']
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 
+          {
+            loader: 'postcss-loader',
+            options: {config: {path: './postcss.config.js'}}
+          },
+          'sass-loader']
       },
       { 
         test: /\.js$/, 

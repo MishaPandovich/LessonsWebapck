@@ -2,7 +2,6 @@ import AppService from './moduls/app.service.js';
 import {config} from './moduls/consig.js';
 import './moduls/header.component.js';
 
-import './css/index.css';
 import './scss/index.scss';
 
 console.log(css);
